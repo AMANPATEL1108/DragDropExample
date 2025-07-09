@@ -1,0 +1,9 @@
+/* Gives the dragged item a subtle shadow */
+.cdk-drag-preview {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Hides placeholder’s text so only outline is visible */
+.cdk-drag-placeholder {
+  opacity: 0;
+}

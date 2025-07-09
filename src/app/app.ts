@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TaskBoardComponent } from './components/task-board/task-board';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [TaskBoardComponent],
+  template: `<app-task-board></app-task-board>`,
 })
-export class App {
-  protected title = 'DragDropExample';
-}
+export class AppComponent {}

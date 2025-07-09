@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+/* task-board.css (or global styles.css) */
+ul[c­dkDropList] {
+  min-height: 3rem; /* ≈48 px – big enough to hit */
+  padding: 0.25rem; /* so min-height is inside the card */
+}
+
+ul[c­dkDropList].cdk-drop-list-dragging {
+  background: #f8f9fa; /* light grey while dragging */
+  border: 2px dashed #6c757d; /* dashed outline */
+}

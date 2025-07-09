@@ -1,0 +1,41 @@
+<div class="container py-4">
+    <div class="row">
+      <ng-container *ngFor="let list of lists; let i = index">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white text-center">
+              {{ list.name }}
+            </div>
+  
+            <ul
+            class="list-group list-group-flush"
+            cdkDropList
+            [id]="'list-' + i"
+            [cdkDropListData]="list.tasks"
+            [cdkDropListConnectedTo]="connectedTo(i)"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <!-- show placeholder when no tasks -->
+            <li
+              class="list-group-item text-muted text-center"
+              *ngIf="list.tasks.length === 0"
+            >
+              Drop tasks here
+            </li>
+          
+            <!-- normal tasks -->
+            <li
+              class="list-group-item"
+              *ngFor="let task of list.tasks"
+              cdkDrag
+            >
+              <span class="me-2 bi bi-grip-vertical"></span>{{ task }}
+            </li>
+          </ul>
+          
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

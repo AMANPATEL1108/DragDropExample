@@ -1,0 +1,20 @@
+{
+  "taskLists": [
+    {
+      "name": "Task Menu",
+      "tasks": [
+        "Set up project structure",
+        "Write unit tests",
+        "Update documentation"
+      ]
+    },
+    {
+      "name": "In Progress",
+      "tasks": ["Implement drag & drop"]
+    },
+    {
+      "name": "Done",
+      "tasks": ["Initial commit"]
+    }
+  ]
+}
